@@ -1,10 +1,9 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-Created on Mon Oct  2 20:57:08 2017
-
-@author: ujjwal
+A recursive function to calculate bond price.
 """
+
 
 def bondPrice(Principal, Coupon, Yield, Tenor):
     
@@ -22,7 +21,8 @@ def bondPrice(Principal, Coupon, Yield, Tenor):
     
     return price
 
-print "Welcome to Ujjwal's Calculator"
+print "Provide inputs to calculate a bond price"
+
 Principal = input("Principal: ")
 Coupon = input("Coupon: ")
 Yield = input("Yield: ")
