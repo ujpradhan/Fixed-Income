@@ -1,7 +1,14 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-A recursive function to calculate bond price.
+@author: ujjwal
+
+A recursive function to calculate bond price
+
+Units:
+Principal and coupon in dollars
+Yield in %
+Tenor in years
 """
 
 
@@ -16,16 +23,16 @@ def bondPrice(Principal, Coupon, Yield, Tenor):
     price = p
     
     #using recursion
-    if n >0:
+    if n > 0:
         price = bondPrice((price + c)/(1 + r), c, r, n - 1)
     
     return price
 
-print "Provide inputs to calculate a bond price"
+print("Provide inputs to calculate a bond price")
 
-Principal = input("Principal: ")
-Coupon = input("Coupon: ")
-Yield = input("Yield: ")
-Tenor = input("Tenor: ")
+Principal = float(input("Principal: "))
+Coupon = float(input("Coupon: "))
+Yield = float(input("Yield: "))/100
+Tenor = float(input("Tenor: "))
 
-print "\nPrice: ", bondPrice(Principal, Coupon, Yield, Tenor)
+print("Price: ", bondPrice(Principal, Coupon, Yield, Tenor))
